@@ -1,0 +1,19 @@
+<section id="contact">
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-container">
+      <div class="contact-item" (click)="showMessage('gmail')">
+        <img src="./assets/gmail.png" alt="Gmail Icon" class="icon" />
+        <p>Gmail</p>
+      </div>
+      <div class="contact-item" (click)="showMessage('callme')">
+        <img src="./assets/Phonenum.png" alt="Call Me Icon" class="icon" />
+        <p>Call Me</p>
+      </div>
+      <div class="contact-item" (click)="showMessage('facebook')">
+        <img src="./assets/facebook.png" alt="Facebook Icon" class="icon" />
+        <p>Facebook</p>
+      </div>
+    </div>
+  
+    <div *ngIf="message" class="message" [innerHTML]="message"></div>
+  </section>

@@ -1,0 +1,40 @@
+<section id="profile">
+  <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Xavier Zues Osias Avelino profile picture" />
+  </div>
+  <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Xavier Zues Osias</h1>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+          <button class="btn btn-color-2" (click)="openCV()">
+              Download CV
+          </button>
+          <button class="btn btn-color-1" (click)="goToContact()">
+              Contact Info
+          </button>
+      </div>
+      <div id="socials-container">
+          <img
+              src="./assets/tiktok.png"
+              alt="My TikTok profile"
+              class="icon"
+              (click)="handleSocialClick('TikTok')"
+          />
+          <img
+              src="./assets/github.png"
+              alt="My GitHub profile"
+              class="icon"
+              (click)="handleSocialClick('GitHub')"
+          />
+          <img
+              src="./assets/facebook.png"
+              alt="My Facebook profile"
+              class="icon"
+              (click)="handleSocialClick('Facebook')"
+          />
+      </div>
+      <!-- Message display -->
+      <div *ngIf="message" class="message">{{ message }}</div>
+  </div>
+</section>
